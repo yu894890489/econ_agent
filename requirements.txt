@@ -1,0 +1,25 @@
+# Core
+pyyaml>=6.0
+click>=8.0
+aiosqlite>=0.19
+httpx>=0.25
+pydantic>=2.0
+
+# Data Processing
+pandas>=2.0
+numpy>=1.24
+
+# Report Generation
+jinja2>=3.1
+markdown>=3.5
+
+# Notification
+dingtalk-chatbot>=0.1
+
+# Optional: Web Dashboard
+fastapi>=0.100
+uvicorn>=0.23
+
+# Optional: Testing
+pytest>=7.0
+pytest-asyncio>=0.21

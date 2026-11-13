@@ -1,0 +1,70 @@
+# Econ Harness 配置文件
+
+# 数据库
+database:
+  path: ./data/econ_harness.db
+
+# TrendRadar
+trendradar:
+  platforms:
+    - weibo
+    - zhihu
+    - thepaper
+    - wallstreetcn
+    - cls
+    - toutiao
+    - baidu
+    - ithome
+    - ifeng
+  rss_sources:
+    - name: 华尔街见闻
+      url: https://rss.example.com/wsj
+  dingtalk_webhook: ""
+
+# 关键词
+keywords:
+  p0:
+    - 美联储
+    - 加息
+    - 降息
+    - 关税
+    - 制裁
+    - 战争
+    - 冲突
+  p1:
+    - AI
+    - 芯片
+    - 半导体
+    - 新能源
+    - 电动车
+  exclude:
+    - 娱乐
+    - 体育
+
+# 模拟盘
+portfolio:
+  initial_capital: 1000000
+  max_position: 0.2          # 单票最大仓位
+  max_total_position: 0.9    # 总仓位上限
+  stop_loss: -0.08           # 止损线
+  commission_rate: 0.0003    # 佣金率
+  stamp_tax_rate: 0.0005     # 印花税率
+
+# 钉钉
+dingtalk:
+  webhook: ""
+  secret: ""
+
+# 插件
+plugins:
+  enabled:
+    - trendradar
+    - econ_agent
+    - portfolio
+    - report
+    - keyword
+
+# 日志
+logging:
+  level: INFO
+  file: ./logs/econ_harness.log
